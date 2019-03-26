@@ -7,7 +7,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { ServicesComponent } from './pages/services/services.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { FooterComponent } from './partials/footer/footer.component';
@@ -19,7 +18,6 @@ import { FooterComponent } from './partials/footer/footer.component';
     AboutComponent,
     ContactComponent,
     ProjectsComponent,
-    ServicesComponent,
     PageNotFoundComponent,
     HeaderComponent,
     FooterComponent
