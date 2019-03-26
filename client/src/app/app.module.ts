@@ -1,7 +1,10 @@
+// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -16,6 +19,19 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ServicesComponent } from './pages/services/services.component';
+
+// Services
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
+import { AuthService } from './services/auth.service';
+import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
+
+// Route Guards
+import { AuthGuard } from './guards/auth.guard';
+
+export function jwtTokenGetter() {
+  return localStorage.getItem('id_token');
+}
+
 
 @NgModule({
   declarations: [
@@ -36,9 +52,17 @@ import { ServicesComponent } from './pages/services/services.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    FlashMessagesModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: jwtTokenGetter
+      }
+    })
   ],
-  providers: [],
+  providers: [FlashMessagesService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
