@@ -6,7 +6,7 @@
 let express = require('express');
 let router = express.Router();
 
-let adminController = require('../controller/admin');
+let adminController = require('../controllers/admin');
 
 // Get messages list - READ
 router.get('/', adminController.displayMessages);

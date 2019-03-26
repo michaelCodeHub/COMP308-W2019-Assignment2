@@ -6,7 +6,15 @@ let router = express.Router();
 // Student Number : 300958145
 // Date : Feb 12, 2019
 
-let mainController = require('../controller/main');
+let mainController = require('../controllers/main');
 
+
+/* POST - processes the Login Page */
+router.post('/login', mainController.processLoginPage);
+
+router.post('/register', mainController.processRegisterPage);
+
+/* GET - perform user logout */
+router.get('/logout', mainController.performLogout);
 
 module.exports = router;
