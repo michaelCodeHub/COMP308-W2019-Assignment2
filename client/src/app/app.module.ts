@@ -15,6 +15,7 @@ import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegisterComponent } from './pages/register/register.component';
     ContactDeleteComponent,
     ContactListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
