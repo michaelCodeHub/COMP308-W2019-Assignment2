@@ -1,3 +1,5 @@
+import { MessageDeleteComponent } from './message-delete/message-delete.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 // Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'projects', component: ProjectsComponent, data: {title: 'Projects'}},
   {path: 'services', component: ServicesComponent, data: {title: 'Services'}},
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
+  {path: 'messages', component: MessagesComponent, data: {title: 'Message'}},
+  {path: 'messages/delete/:id', component: MessageDeleteComponent, data: {title: 'Delete Message'}},
 
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}, canActivate: [AuthGuard]},
   {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Contact'}, canActivate: [AuthGuard]},

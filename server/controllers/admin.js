@@ -15,10 +15,8 @@ let displayMessages = (req,res,next) => {
         if(err){
             return console.error(err);
         }else{
-            res.render('admin/index', { 
-                title: 'User Messages',
-                messages: messageList 
-            });
+            res.json({success: true, msg: 'Contact List Displayed Successfully', messageList: messageList, user: req.user});
+
         }
     })};
 
@@ -41,7 +39,7 @@ let processMessage = (req,res,next) => {
             res.end(err);
         }
         else{
-            res.redirect("/");
+            res.json({success: true, msg: 'Successfully Added New Message'});
         }
     });
 };
@@ -56,7 +54,7 @@ let deleteMessage = (req,res,next) => {
             res.end(err);
         }
         else{
-            res.redirect("/admin");
+            res.json({success: true, msg: 'Successfully Deleted Message'});
         }
     });
 };

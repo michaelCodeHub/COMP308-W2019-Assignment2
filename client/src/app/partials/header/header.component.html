@@ -28,7 +28,7 @@
     <ul class="navbar-nav ml-auto">
       <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i
           class="fas fa-lg fa-user"></i>
-        Welcome, {{ user.displayName }}</li>
+        <a routerLink="/messages">Welcome, {{ user.displayName }}</a></li>
 
       <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="/logout" class="nav-link">
           Logout</a></li>

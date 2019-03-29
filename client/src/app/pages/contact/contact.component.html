@@ -1,13 +1,65 @@
-<app-base-page></app-base-page>>
-<div *ngIf="isLoggedIn()" class="container">
+
+<div class="container main-container">
+  <br/>
+  <br/>
   <div class="row">
-    <div class="col col-md-6">
-      <div class="card">
-        <h5 class="card-header alert-success">Secure</h5>
-        <div class="card-body">
-          <a routerLink="contact-list" class="btn btn-primary"><i class="fas fa-users fa-lg"></i> Contact List</a>
-        </div>
+      <!-- contact information -->
+      <div class="col-lg-5">
+          <div class="">
+              <h3>Contact Information</h3>
+              <hr>
+              <p>Email : michaeljaison.me@gmail.com</p>
+              <p>Mobile : 647-915-7848</p>
+              <p><strong>Address</strong></p>
+              <p>802-2739, Victoria Park Ave</p>
+              <p>Scarborough, ON - M1T1A7</p>
+          </div>
+          <div *ngIf="isLoggedIn()" class="card">
+            <h5 class="card-header alert-success">Secure</h5>
+            <div class="card-body">
+              <a routerLink="contact-list" class="btn btn-primary"><i class="fas fa-users fa-lg"></i> Contact List</a>
+            </div>
+          </div>
       </div>
-    </div>
+
+      <!-- Contact form -->
+      <div class="col-lg-7">
+          <form autocomplete="off" (submit)="onMessageSubmit()">
+              <h3 class="title">Get In Touch</h3>
+              <hr>
+              <div class="contactform row">
+
+                  <div class="row col-lg-12 marginTop">
+                      <p class="col-lg-6">First Name</p>
+                      <input name="firstName"  class="col-lg-6 inputBox"
+                      [(ngModel)]="message.firstName" required type="text"/>
+                  </div>
+                  <div class="row col-lg-12 marginTop">
+                      <p class="col-lg-6">Last Name</p>
+                      <input name="lastName" class="col-lg-6 inputBox"
+                      [(ngModel)]="message.lastName" required type="text"/>
+                  </div>
+                  <div class="row col-lg-12 marginTop">
+                      <p class="col-lg-6">Email</p>
+                      <input name="email" class="col-lg-6 inputBox"
+                      [(ngModel)]="message.email" required type="email"/>
+                  </div>
+                  <div class="row col-lg-12 marginTop">
+                      <p class="col-lg-6">Contact Number</p>
+                      <input name="number" class="col-lg-6 inputBox"
+                      [(ngModel)]="message.number" required type="number"/>
+                  </div>
+                  <div class="row col-lg-12 marginTop">
+                      <p class="col-lg-6">Message</p>
+                      <textarea name="message" class="col-lg-6"
+                      [(ngModel)]="message.message" required type="text"></textarea>
+                  </div>
+                  <div class="row marginTop">
+                      <button class="btn btn-primary myButton" type="submit">SEND MESSAGE</button>
+
+                  </div>
+              </div>
+          </form>
+      </div>
   </div>
 </div>

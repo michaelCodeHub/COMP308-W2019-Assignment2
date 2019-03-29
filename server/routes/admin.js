@@ -12,7 +12,7 @@ let adminController = require('../controllers/admin');
 router.get('/', adminController.displayMessages);
 
 // Adding a messge to the db
-router.post('/', adminController.processMessage);
+router.post('/add', adminController.processMessage);
 
 //delete a message from db
 router.get('/delete/:id', adminController.deleteMessage);
