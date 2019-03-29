@@ -16,7 +16,7 @@ export class MessageService {
 
   // private endpoint = 'https://comp308-w2019-lesson10b.herokuapp.com/api/contact-list/';
 
-  private endpoint = 'http://localhost:3000/api/admin/';
+  private endpoint = 'https://comp308-w2019-assignment2.herokuapp.com/api/admin/';
 
   private httpOptions = {
     headers: new HttpHeaders({
