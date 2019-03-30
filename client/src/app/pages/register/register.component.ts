@@ -1,3 +1,9 @@
+
+// File Name : register.component.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';

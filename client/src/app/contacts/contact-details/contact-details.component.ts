@@ -1,3 +1,9 @@
+
+// File Name : contact-details.component.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Component, OnInit } from '@angular/core';
 import { ContactListService } from 'src/app/services/contact-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
@@ -40,8 +46,10 @@ export class ContactDetailsComponent implements OnInit {
     });
   }
 
+  // submit button in add/detils page
    onDetailsPageSubmit(): void {
     switch (this.title) {
+      // add contact
       case 'Add Contact':
       this.contactListService.addContact(this.contact).subscribe(data => {
         if (data.success) {
@@ -53,7 +61,7 @@ export class ContactDetailsComponent implements OnInit {
         }
       });
       break;
-
+// update contact
       case 'Edit Contact':
       this.contactListService.editContact(this.contact).subscribe(data => {
         if (data.success) {

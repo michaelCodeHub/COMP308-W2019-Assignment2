@@ -32,6 +32,7 @@ export class ContactDeleteComponent implements OnInit {
     this.deleteContact(this.contact);
   }
 
+  // deleting a contact
   private deleteContact(contact: Contact): void {
     this.contactListService.deleteContact(contact).subscribe(data => {
       if (data.success) {

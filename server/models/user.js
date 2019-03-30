@@ -1,3 +1,9 @@
+
+// File Name : user.js
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 // require modules for our User Model
 let mongoose = require("mongoose");
 let passportLocalMongoose = require("passport-local-mongoose");

@@ -1,3 +1,9 @@
+
+// File Name : auth.service.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';

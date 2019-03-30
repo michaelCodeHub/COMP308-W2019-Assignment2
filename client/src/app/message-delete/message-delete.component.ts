@@ -34,6 +34,7 @@ export class MessageDeleteComponent implements OnInit {
     this.deleteMessage(this.message);
   }
 
+  // Deletning a message
   private deleteMessage(message: Message): void {
     this.messageService.deleteMessage(message).subscribe(data => {
       if (data.success) {

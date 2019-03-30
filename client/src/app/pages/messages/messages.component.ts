@@ -1,3 +1,9 @@
+
+// File Name : messages.component.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { MessageService } from './../../services/message.service';
@@ -31,6 +37,8 @@ export class MessagesComponent implements OnInit {
       this.router.navigate(['/messages']);
     }
   }
+
+  // displaying visitors messages
 
   displayMessageList(): void {
     this.messageService.getList().subscribe(data => {

@@ -1,3 +1,9 @@
+
+// File Name : app.module.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

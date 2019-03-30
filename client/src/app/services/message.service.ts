@@ -1,3 +1,9 @@
+
+// File Name : app.module.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Message } from './../models/message';
 
 import { Injectable } from '@angular/core';

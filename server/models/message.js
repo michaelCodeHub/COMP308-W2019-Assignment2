@@ -1,7 +1,8 @@
-// File Name : modesl/message.js
+
+// File Name : message.js
 // Author Name : Michael ADAIKALARAJ
 // Student Number : 300958145
-// Date : Feb 12, 2019
+// Date : Mar 29, 2019
 
 let mongoose = require('mongoose');
 

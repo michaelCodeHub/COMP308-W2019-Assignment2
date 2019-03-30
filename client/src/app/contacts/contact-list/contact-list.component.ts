@@ -25,12 +25,14 @@ export class ContactListComponent implements OnInit {
     this.displayContactList();
   }
 
+  // on delete button click ask for confirmation
   private onDeleteClick(): void {
     if(!confirm('Are You Sure?')) {
       this.router.navigate(['/contact/contact-list']);
     }
   }
 
+  // displaying contact list
   displayContactList(): void {
     this.contactListService.getList().subscribe(data => {
       if(data.success) {

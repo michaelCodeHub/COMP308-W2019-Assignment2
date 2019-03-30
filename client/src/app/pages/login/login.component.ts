@@ -1,3 +1,9 @@
+
+// File Name : login.component.ts
+// Author Name : Michael ADAIKALARAJ
+// Student Number : 300958145
+// Date : Mar 29, 2019
+
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from 'src/app/services/auth.service';
@@ -22,6 +28,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.user = new User();
   }
+
+  // on login submit
 
   onLoginSubmit(): void {
      this.authService.authenticateUser(this.user).subscribe(data => {

@@ -1,3 +1,5 @@
+
+// message model
 export class Message {
 // tslint:disable-next-line: variable-name
   _id: string;
