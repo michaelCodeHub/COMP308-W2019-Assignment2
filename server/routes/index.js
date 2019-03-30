@@ -12,7 +12,7 @@ let mainController = require('../controllers/main');
 /* POST - processes the Login Page */
 router.post('/login', mainController.processLoginPage);
 
-/* POST
+/* POST */
 router.post('/register', mainController.processRegisterPage);
 
 /* GET - perform user logout */
